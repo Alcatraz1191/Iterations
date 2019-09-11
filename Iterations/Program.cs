@@ -7,10 +7,17 @@ namespace Iterations
         static void Main(string[] args)
         {
             Console.WriteLine("How many years of experience do you have in professional programming?");
-            string exp = Console.ReadLine();
-            for(int i = 0; i < int.Parse(exp) ; i++)
+            try
             {
-                Console.WriteLine("You have " + (i+1) + " years of experience!");
+                string exp = Console.ReadLine();
+                for (int i = 0; i <= int.Parse(exp); i++)
+                {
+                    Console.WriteLine("You have " + i + " years of experience!");
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Please enter a numerical value");
             }
         }
     }
